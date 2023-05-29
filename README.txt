@@ -1,6 +1,13 @@
+== PROBLEM STATEMENT ==
+It would be nice to be able to use both Obsidian and vimwiki as editors for the exact same markdown files.
+One problem with this is that the default settings for Obsidian use a link format that is incompatible with vimwiki.
+
+You can just change the settings, but if you have an existing vault, the old links need to be converted.
+
+
 == ABOUT ==
 
-This script (fix-links.py) changes obsidian links for their short format:
+This script (fix-links.py) changes obsidian links from their short format:
     [[foo]] or [[foo|bar]]
 
 to the format that vimwiki expects:
@@ -31,3 +38,12 @@ Note that you don't need to have fix-links.py in the root directory of your Obsi
 the CURRENT WORKING DIRECTORY be the root directory of your Obsidian vault.
 Of course it doesn't hurt if you put the script in the root directory of your vault.
 
+
+== RECOMMENDED OBSIDIAN SETTINGS ==
+You should change your obsidian settings so that you don't need to keep running this script.
+
+Here's what I use:
+Settings > Files & Links > New link format = Relative path to file
+
+This one is optional, since vimwiki does work with the markdown-style links.
+Settings > Files & Links > Use [[Wikilinks]] = Yes
