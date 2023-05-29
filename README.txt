@@ -23,4 +23,11 @@ Use python 3 to run fix-links.py with the current working directory being the ro
 
 THIS SCRIPT WILL OPERATE ON ALL .md FILES WITHIN THAT DIRECTORY AND ALL NESTED DIRECTORIES.
 
+So to run it, I go:
+cd some_dir_i_want_to_format
+python ../fix-links.py
+
+Note that you don't need to have fix-links.py in the root directory of your Obsidian vault, you just need to have
+the CURRENT WORKING DIRECTORY be the root directory of your Obsidian vault.
+Of course it doesn't hurt if you put the script in the root directory of your vault.
 
