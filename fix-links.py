@@ -34,6 +34,11 @@ def swap_link(line, rel_paths):
 
 def replace_with_rel(input: re.Match, rel_paths):
     key = input.group(2)
+    trimmed_key = key.rstrip()
+
+    if key not in rel_paths:
+        key = trimmed_key
+
     if key not in rel_paths:
         return input.group(0)
 
